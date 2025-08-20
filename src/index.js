@@ -11,7 +11,21 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <StyleProvider layer>
-      <ConfigProvider>
+      <ConfigProvider
+        theme={{
+          components: {
+            Button: {
+              colorPrimary: "#9CAFAA",
+              colorPrimaryHover: "#8D9593",
+              colorPrimaryActive: "#8D9593",
+            },
+            Checkbox: {
+              colorPrimary: "#9CAFAA",
+              colorPrimaryHover: "#D6DAC8",
+            },
+          },
+        }}
+      >
         <App />
       </ConfigProvider>
     </StyleProvider>
